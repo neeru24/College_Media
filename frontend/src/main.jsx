@@ -17,7 +17,7 @@ import { NotificationProvider } from "./context/NotificationContext.jsx";
 import { register as registerServiceWorker } from "./utils/serviceWorkerRegistration";
 import "./index.css";
 import "./styles/accessibility.css";
-import App from "./App.jsx";
+import App from "./app/App.jsx";
 
 // Register service worker for PWA
 registerServiceWorker();
