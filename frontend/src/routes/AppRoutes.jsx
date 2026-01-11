@@ -43,7 +43,8 @@ const Trending = lazy(() => import("../pages/Trending.jsx"));
 const Feed = lazy(() => import("../pages/Feed.jsx"));
 const StudyBuddyMatcher = lazy(() => import("../pages/StudyBuddyMatcher.jsx"));
 const InstructorDashboard = lazy(() => import("../pages/InstructorDashboard.jsx"));
-const NotFound = lazy(() => import("../pages/NotFound.jsx"));
+const ResumeBuilder = lazy(() => import("../pages/ResumeBuilder.jsx"));
+const AlumniResumeReview = lazy(() => import("../pages/AlumniResumeReview.jsx"));
 
 // Protected Route wrapper
 const ProtectedRoute = ({ children }) => {
@@ -103,6 +104,24 @@ const AppRoutes = ({
         }
       />
 
+      <Route
+          path="resume/build"
+          element={
+              <LazyWrapper>
+                  <ResumeBuilder />
+              </LazyWrapper>
+          }
+      />
+
+      <Route
+          path="resume/review"
+          element={
+              <LazyWrapper>
+                  <AlumniResumeReview />
+              </LazyWrapper>
+          }
+      />
+      
       <Route
         path="/forgot-password"
         element={
